@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ABBY-Phase-2-Code_Challenge_1/static/css/main.0f5e3f82.css",
+    "main.js": "/ABBY-Phase-2-Code_Challenge_1/static/js/main.7c5c68e0.js",
+    "static/js/453.d3943c81.chunk.js": "/ABBY-Phase-2-Code_Challenge_1/static/js/453.d3943c81.chunk.js",
+    "index.html": "/ABBY-Phase-2-Code_Challenge_1/index.html",
+    "main.0f5e3f82.css.map": "/ABBY-Phase-2-Code_Challenge_1/static/css/main.0f5e3f82.css.map",
+    "main.7c5c68e0.js.map": "/ABBY-Phase-2-Code_Challenge_1/static/js/main.7c5c68e0.js.map",
+    "453.d3943c81.chunk.js.map": "/ABBY-Phase-2-Code_Challenge_1/static/js/453.d3943c81.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f5e3f82.css",
+    "static/js/main.7c5c68e0.js"
+  ]
+}
