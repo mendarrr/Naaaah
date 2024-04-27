@@ -1,0 +1,14 @@
+
+#navbar{
+    background: aqua;
+    line-height: 2vh;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.title{
+    font-size: 50px;
+    font-weight: 400px;
+    font-family: 'Times New Roman', Times, serif;
+}
