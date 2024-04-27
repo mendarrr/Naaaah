@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  },
+
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+
+  "homepage": "https://mendarrr.github.io/ABBY-Phase-2-Code_Challenge_1"
+}
+
