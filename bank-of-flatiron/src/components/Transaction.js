@@ -1,15 +1,21 @@
 import React, { useState } from "react";
 import "./Transaction.css";
+import { bankTransactions } from "./Data";
 
 const Transaction = () => {
-  const [transactions, setTransactions] = useState([]);
+  const [transactions, setTransactions] = useState(() => {
+    const storedTransactions = localStorage.getItem("transactions");
+    return storedTransactions ? JSON.parse(storedTransactions) : [];
+  });
   const [searchTerm, setSearchTerm] = useState("");
   const [newTransaction, setNewTransaction] = useState({
+    id: bankTransactions.length + 1,
     date: "",
     description: "",
     category: "",
     amount: "",
   });
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -26,6 +32,8 @@ const Transaction = () => {
     ) {
       setTransactions([...transactions, newTransaction]);
       setNewTransaction({
+        // Generae a new unique id for each transaction
+        id: bankTransactions.length + 1,
         date: "",
         description: "",
         category: "",
@@ -37,8 +45,13 @@ const Transaction = () => {
   const filteredTransactions = searchTerm
     ? transactions.filter((transaction) =>
         transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
-      )
+      ) 
+      
     : transactions;
+
+    React.useEffect(() => {
+      localStorage.setItem("transactions", JSON.stringify(transactions));
+    }, [transactions]);
 
   return (
     // Search Bar 
@@ -102,6 +115,7 @@ const Transaction = () => {
           </div>
         </form>
       </div>
+
 {/* 
       // Display Table */}
       <div className="table">
